@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+        body{
+            overflow-y: hidden;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+
+        .heading {
+            font-size: 3.5rem;
+            margin-top: 35px;
+            margin-right: 42vw;
+            margin-left: 35vw;
+        }
+
+        .heading .h2 {
+            margin-left: 10px;
+            color: rgb(72, 175, 72);
+        }
+
+        .personal {
+            margin-top: 50px;
+            margin-left: 12vw;
+            font-size: 2rem;
+        }
+
+        .details {
+            margin-left: 9vw;
+            margin-top: 29px;
+        }
+
+        .details .secondside {
+            margin-top: 15px;
+        }
+
+        .details .firstside,
+        .secondside {
+            margin-right: 10vw;
+            font-size: 1.4rem;
+        }
+
+        .details .firstside,
+        .secondside .flex,
+        .flex {
+            margin-top: 15px;
+        }
+
+        .flex .qun {
+            opacity: 0.7;
+        }
+
+        .flex .ans {
+            margin-left: 10px;
+        }
+
+        .button {
+            margin-left: 13vw;
+            margin-top: 51px;
+        }
+
+        .button button {
+            height: 53px;
+            width: 163px;
+            background-color: #48af48;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s ;
+        }
+        .button button:hover{
+            background-color: black;
+            color: #48af48;
+        }
+
+        .courses li {
+            list-style: none;
+
+        }
+
+        .experiences .flex .courses h4 {
+            font-size: 2.2rem;
+            color: #48af48;
+        }
+
+        .experiences .flex .courses .flex .line {
+
+            margin-right: 6px;
+            color: #48af48;
+            background-color: #48af48;
+            font-size: 1px;
+            height: 8px;
+
+            margin-top: 6px;
+            border-radius: 22px;
+        }
+
+        @keyframes slowmotion1 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 131px;
+            }
+
+        }
+
+        .experiences .flex .courses .flex .line1 {
+            width: 131px;
+            margin-left: 4px;
+            animation: slowmotion1 0.7s ease-in;
+        }
+
+        @keyframes slowmotion2 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 115px;
+            }
+
+        }
+
+        .experiences .flex .courses .flex .line2 {
+            margin-left: 23px;
+            width: 115px;
+            animation: slowmotion2 0.6s ease-in;
+        }
+
+        @keyframes slowmotion3 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 84px;
+            }
+
+        }
+
+        .experiences .flex .courses .flex .line3 {
+            margin-left: 38px;
+            width: 84px;
+            animation: slowmotion3 0.6s ease-in;
+        }
+
+        @keyframes slowmotion4 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 99px;
+            }
+
+        }
+
+        .experiences .flex .courses .flex .line4 {
+            margin-left: 25px;
+            width: 99px;
+            animation: slowmotion4 0.7s ease-in;
+        }
+
+        @keyframes slowmotion5 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 88px;
+            }
+
+        }
+        .experiences .flex .courses .flex .line5 {
+            width: 88px;
+            margin-left: 4px;
+            animation: slowmotion5 0.6s ease-in;
+        }
+        @keyframes motion {
+            0%{
+                display: none;
+            }
+            100%{
+                display:block;
+            }
+        }
+
+        .boxes .box1,.box2 {
+            border: 2px solid white;
+            margin-top: 34px;
+            border-radius: 15px;
+            animation: motion 0.8s ease-in;
+        }
+
+        .boxes .box1 h4 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+            margin-left: 19px;
+            margin-bottom: 5px;
+            color: #48af48;
+            animation: slow 0.8s ease-in;
+        }
+
+        .boxes .box1  p{
+            margin-top: 6px;
+            margin-left: 58px;
+            font-size: 1.5rem;
+            margin-right: 0px;
+            margin-bottom: 10px;
+            animation: slow 2s ease-in;
+        }
+        .boxes .box2 h4{
+            font-size: 2.5rem;
+            margin-top: 10px;
+            margin-left: 19px;
+            margin-bottom: 5px;
+            color: #48af48;
+        }
+        .boxes .box2 p{
+            margin-top: 6px;
+            margin-left: 58px;
+            font-size: 1.5rem;
+            margin-right: 0px;
+            margin-bottom: 10px;
+        }
+
+
+        .navbar {
+            height: 89vh;
+            width: 18vw;
+            padding-top: 24vh;
+        }
+
+        .navbar li .home img {
+            filter: invert(2);
+            background-color: #af5a8d;
+            height: 28px;
+        }
+        .navbar li .rem img{
+            filter: invert(2);
+            background-color: #af5a8d;
+            height: 28px;
+        }
+        .navbar li .rem:hover{
+            padding-top: 18px;
+            padding-left: 16px;
+            height: 45px;
+            width: 133px;
+            background-color: #48af48;
+            margin-left: 33px;
+
+            .text {
+                display: flex;
+            }
+        }
+
+        .navbar li .home:hover {
+            padding-top: 18px;
+            padding-left: 16px;
+            height: 45px;
+            width: 133px;
+            background-color: #48af48;
+            margin-left: 33px;
+
+            .text {
+                display: flex;
+            }
+        }
+
+        .navbar .home .text {
+            background-color: #48af48;
+            height: 33px;
+            display: none;
+            margin-left: 9px;
+            transition: 0.5s ease-in;
+            color: black;
+        }
+        .navbar .rem .text{
+            background-color: #48af48;
+            height: 33px;
+            display: none;
+            margin-left: 9px;
+            transition: 0.5s ease-in;
+            text-decoration: none;
+        }
+
+        .navbar li {
+            list-style: none;
+            margin-top: 35px;
+            margin-left: 0vw;
+            font-size: 28px;
+            margin-right: 10vw;
+        }
+
+        .navbar li .home,.rem {
+            padding-top: 18px;
+            padding-left: 17px;
+            height: 45px;
+            width: 44px;
+            background-color: #48af48;
+            margin-left: 120px;
+            border-radius: 38px;
+            cursor: pointer;
+            transition: 0.1s ease-in;
+            transition: 0.5s ease-out;
+        }
+
+        .left {
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="left">
+            <div class="heading flex">
+                <div class="h1">ABOUT</div>
+                <div class="h2">ME</div>
+            </div>
+            <div class="info flex">
+                <div class="aboutme">
+                    <div class="personal">PERSONAL INFO</div>
+                    <div class="flex details">
+                        <div class="firstside">
+                            <div class="flex">
+                                <div class="qun">First Name :</div>
+                                <div class="ans">Siva Kalki</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Last Name :</div>
+                                <div class="ans">Pusarla</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Age :</div>
+                                <div class="ans">19 Years</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Nationality :</div>
+                                <div class="ans">Indian</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Freelance :</div>
+                                <div class="ans">Available</div>
+                            </div>
+                        </div>
+                        <div class="secondside">
+                            <div class="flex">
+                                <div class="qun">Address :</div>
+                                <div class="ans">Rajahmundry</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Phone :</div>
+                                <div class="ans">8008286137</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Email :</div>
+                                <div class="ans">sivakalki1@gmail.com</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">LinkedIn:</div>
+                                <div class="ans">kalki_pusarla</div>
+                            </div>
+                            <div class="flex">
+                                <div class="qun">Languages :</div>
+                                <div class="ans">English,Telugu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('./myresume.pdf')">Get CV</button>
+                    </div>
+                </div>
+                <div class="experiences">
+                    <div class="flex">
+                        <div class="courses">
+                            <h4>Courses Known</h4>
+                            <div class="flex">
+                                <li class="HTML">HTML</li>
+                                <div class="line1 line">linehere</div>
+                                <div class="percent">90%</div>
+                            </div>
+                            <div class="flex">
+                                <li class="HTML">CSS</li>
+                                <div class="line2 line">linehere</div>
+                                <div class="percent">87%</div>
+                            </div>
+                            <div class="flex">
+                                <li class="HTML">JS</li>
+                                <div class="line3 line">linehere</div>
+                                <div class="percent">80%</div>
+                            </div>
+                            <div class="flex">
+                                <li class="HTML">C++</li>
+                                <div class="line4 line">linehere</div>
+                                <div class="percent">85%</div>
+                            </div>
+                            <div class="flex">
+                                <li class="HTML">Python</li>
+                                <div class="line5 line">linehere</div>
+                                <div class="percent">80%</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="boxes">
+                        <div class="box1">
+                            <h4>4+</h4>
+                            <p>Certificates</p>
+                        </div>
+                        <div class="box2">
+                            <h4>3+</h4>
+                            <p>Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="skills"></div>
+        </div>
+        <div class="right">
+            <div class="navbar flex_column">
+                <li>
+                    <div class="rem flex">
+                        <img src="./home.png" alt="home logo here">
+                        <a class="text" href="./index.html">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="home flex">
+                        <img src="./profile.png" alt="home logo here">
+                        <div class="text">Profile</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="rem flex">
+                        <img src="./blogs.png" alt="home logo here">
+                        <a class="text" href="./projects.html">Projects</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="rem flex">
+                        <img src="./contact.png" alt="home logo here">
+                        <a class="text" href="./contact.html">Contact</a>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Fasthand&family=Josefin+Sans:ital,wght@1,500&family=Lora:ital,wght@1,500&family=Pacifico&family=Tektur&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(17 17 17);
+            color: white;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .line {
+            width: 1vw;
+            background-color: #ff0099;
+            color: #ff0099;
+        }
+
+
+        .img .line1 {
+            height: 1vw;
+            background: #ff0099;
+            width: 7vw;
+            color: #ff0099;
+        }
+
+        .img .line2 {
+            height: 1vw;
+            background: #ff0099;
+            width: 13vw;
+            color: #ff0099;
+        }
+
+        .img img {
+            background-color: black;
+            height: 96vh;
+            margin-right: 2vw;
+            border-radius: 8px;
+            margin-bottom: 0px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex_column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 70vw;
+            margin-top: 100px;
+            height: 50vh;
+        }
+
+        .sidebar .matter {
+            margin-top: 11vh;
+            margin-left: 3vw;
+        }
+
+        .matter .name {
+            font-size: 3rem;
+        }
+
+        .matter .kalki {
+            font-size: 3rem;
+            font-family: 'Belanosima', sans-serif;
+            margin-left: 13px;
+            color: #ff0099;
+            margin-top: 0px;
+        }
+
+        .matter .about {
+            font-size: 2rem;
+            font-family: 'Lora', serif;
+        }
+
+        .matter2 {
+            margin-top: 16px;
+            font-size: 1.3rem;
+            font-family: 'Josefin Sans', sans-serif;
+            width: 40vw;
+            line-height: 31px;
+        }
+
+        .about {
+            display: inline-flex;
+            margin-top: 10px;
+        }
+
+        .dynamic {
+            margin-left: 10px;
+            line-height: 40px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .dynamic li {
+            list-style: none;
+
+            position: relative;
+            top: 0;
+            animation: slide 3.3s steps(2) infinite;
+        }
+
+        @keyframes slide {
+            100% {
+                top: -80px;
+            }
+        }
+
+        .dynamic li span {
+            color: #ff0099;
+            position: relative;
+        }
+
+        .dynamic li span::after {
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            background-color: rgb(17 17 17);
+            border-left: 2px solid #ff0099;
+            animation: typing 1.5s steps(9) infinite;
+        }
+
+        @keyframes typing {
+            100% {
+                left: 100%;
+                margin: 0 -35px 0 35px;
+            }
+        }
+
+        .button {
+            margin-top: 38px;
+
+        }
+
+        .button button {
+            font-family: 'Tektur', cursive;
+            height: 39px;
+            width: 124px;
+            background-color: #ff0099;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .button button:hover{
+            background-color: rgb(17 17 17);
+            color: #ff0099;
+        }
+        .navbar {
+            height: 89vh;
+            width: 18vw;
+            padding-top: 24vh;
+        }
+
+        .navbar li .home img {
+            filter: invert(2);
+            background-color: #00ff66;
+            height: 28px;
+        }
+
+        .navbar li .rem img {
+            filter: invert(2);
+            background-color: #00ff66;
+            height: 28px;
+        }
+
+        .navbar li .rem:hover {
+            padding-top: 18px;
+            padding-left: 16px;
+            height: 45px;
+            width: 133px;
+            background-color: #ff0099;
+            margin-left: 33px;
+
+            .text {
+                display: flex;
+            }
+        }
+
+        .navbar li .home:hover {
+            padding-top: 18px;
+            padding-left: 16px;
+            height: 45px;
+            width: 133px;
+            background-color: #ff0099;
+            margin-left: 33px;
+
+            .text {
+                display: flex;
+            }
+        }
+
+        .navbar .home .text {
+            background-color: #ff0099;
+            height: 33px;
+            display: none;
+            margin-left: 9px;
+            transition: 0.5s ease-in;
+            color: black;
+        }
+
+        .navbar .rem .text {
+            background-color: #ff0099;
+            height: 33px;
+            display: none;
+            margin-left: 9px;
+            transition: 0.5s ease-in;
+            text-decoration: none;
+        }
+
+        .navbar li {
+            list-style: none;
+            margin-top: 35px;
+            margin-left: 0vw;
+            font-size: 28px;
+            margin-right: 10vw;
+        }
+
+        .navbar li .home,
+        .rem {
+            padding-top: 18px;
+            padding-left: 17px;
+            height: 45px;
+            width: 44px;
+            background-color: #ff0099;
+            margin-left: 120px;
+            border-radius: 38px;
+            cursor: pointer;
+            transition: 0.1s ease-in;
+            transition: 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portfolio flex">
+        <div class="line">
+            color here
+        </div>
+        <div class="img">
+            <div class="line1">line1 here</div>
+            <img src="./my_photo.png" alt="my photo here">
+            <div class="line2"></div>
+        </div>
+        <div class="sidebar flex">
+            <div class="matter">
+                <div class="name flex">
+                    <div class="name">I Am </div>
+                    <div class="kalki"> SIVA KALKI</div>
+                </div>
+                <div class="about">
+                    <div>WEB</div>
+                    <ul class="dynamic">
+                        <li><span>DEVELOPER</span></li>
+                        <li><span>DESIGNER</span></li>
+                    </ul>
+                </div>
+                <div class="matter2">I am a web designer and front end developer focused on creating clean &
+                    user-friendly webpages.I am passionate
+                    about creating a excellent webpages.
+                </div>
+                <div class="button"><button onclick="window.location.href='./about.html'">More About Me</button></div>
+            </div>
+        </div>
+        <div class="navbar flex_column">
+            <li>
+                <div class="home flex">
+                    <img src="./home.png" alt="home logo here">
+                    <div class="text">Home</div>
+                </div>
+            </li>
+            <li>
+                <div class="rem flex">
+                    <img src="./profile.png" alt="home logo here">
+                    <a class="text" href="./about.html">Profile</a>
+                </div>
+            </li>
+            <li>
+                <div class="rem flex">
+                    <img src="./blogs.png" alt="home logo here">
+                    <a class="text" href="./projects.html">Projects</a>
+                </div>
+            </li>
+            <li>
+                <div class="rem flex">
+                    <img src="./contact.png" alt="home logo here">
+                    <a class="text" href="./contact.html">Contact</a>
+                </div>
+            </li>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

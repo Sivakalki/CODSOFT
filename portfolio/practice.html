@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice page</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .wrapper{
+            display: inline-flex;
+        }
+        .static{
+            font-size: 2rem;
+        }
+        .dynamic{
+            margin-left: 10px;
+            line-height: 35px;
+            height: 35px;
+            overflow: hidden;
+        }
+        @keyframes slide{
+            100%{
+                top: -70px;
+            }
+        }
+        .dynamic li{
+            list-style: none;
+            color: orangered;
+            font-size: 2rem;
+            position: relative;
+            top:0;
+            animation: slide 3.1s steps(2) infinite;
+        }
+        .dynamic li span{
+            position: relative;
+        }
+        .dynamic li span::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-color: black;
+            border-left: 2px solid red;
+            animation: typing 1.5s steps(10) infinite;
+        }
+        @keyframes typing {
+           
+            100%{
+                left: 100%;
+                margin: 0 -10px 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="static">Web </div>
+        <ul class="dynamic">
+            <li><span>Developer</span></li>
+            <li><span>Designer</span></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+<div class="pro">
+    <h3>Landing page</h3>
+    <img class="image" src="./landingpage.png" alt="landing page image here">
+    <p>It is a landing page of the shopiee website. This is a Women's shopping website shows a trendy
+        collection with customer friendly prices.</p>
+</div>
